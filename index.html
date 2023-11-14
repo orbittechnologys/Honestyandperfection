@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/x-icon" href="/images/assets">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@600&family=Inter:wght@700&display=swap"
+        rel="stylesheet"> -->
+
+    <title>Honesty & Perfection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.721), rgba(0, 0, 0, 0.556)), url(./img1.jpg);
+            background-size: cover;
+            position: relative;
+
+        }
+
+        .navbar {
+            margin-top: 1%;
+            position: absolute;
+            width: 100%;
+        }
+
+        .navbar ul li {
+            position: relative;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #0a0a0a;
+            text-align: center;
+            font-weight: 500;
+            padding: 13px 13px;
+            text-decoration: none;
+        }
+
+        .navbar .nav-bar .nav-bar_item {
+            list-style-type: none;
+            padding: 0px 20px;
+        }
+
+        .navbar .nav-bar .dropdown {
+            position: relative;
+        }
+
+        .navbar a:hover {
+            color: white
+        }
+
+        .navbar .dropdown-menu a:hover {
+            color: #fab105;
+        }
+
+        #content {
+            margin-top: 50%;
+            margin-bottom: 20%;
+        }
+
+        .img {
+            border-radius: 75%;
+            background: rgba(247, 177, 14, 0.431);
+            width: 80%;
+            max-width: 500px;
+            height: auto;
+            flex-shrink: 0;
+            margin: 9% 0;
+            position: relative;
+
+        }
+
+        .img::before {
+            content: "";
+            position: absolute;
+            width: 80%;
+            top: 20%;
+            left: 10%;
+            right: 10%;
+            bottom: 0%;
+            background: rgba(247, 177, 14, 0.431);
+            border-radius: 50%;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: center;
+            /* padding: 5%; */
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px;
+        }
+
+        .yellow-box {
+            position: relative;
+            background: #EDA501;
+            box-shadow: 5px 21px 16px 12px rgba(0, 0, 0, 0.266);
+            width: 505px;
+            height: 150px;
+            flex-shrink: 0;
+            left: 8%;
+            top: 70px;
+            font-family: Russo One;
+            z-index: 0;
+            font-weight: 700;
+
+        }
+
+        @media only screen and (max-width: 768px) {
+            .yellow-box {
+                width: 90%;
+                max-width: none;
+                left: 5%;
+                top: 30px;
+                font-size: 18px;
+            }
+        }
+
+        @keyframes moveUpDown {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+
+            }
+        }
+
+        .animated-image {
+            animation: moveUpDown 1.5s infinite;
+
+        }
+
+        .para {
+            color: #000;
+            font-family: Russo One;
+            font-size: 48px;
+            /* font-style: normal; */
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .container {
+            margin-top: 10%;
+        }
+
+        .container {
+            position: relative;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        .image {
+            width: 300px;
+            height: 200px;
+        }
+
+
+        .text {
+            position: absolute;
+            top: 35%;
+            left: 40%;
+            right: 10%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            color: white;
+            border-radius: 10px;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .text2 {
+            position: absolute;
+            top: 35%;
+            left: 5%;
+            right: 40%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            color: white;
+            border-radius: 10px;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .image1 {
+            width: 500px;
+            height: 500px;
+
+        }
+
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: "Montserrat";
+        }
+
+        .left-img {
+            min-height: 80vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+
+        }
+
+        .container1 {
+            width: 100%;
+            max-width: 1000px;
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .left {
+            width: 70%;
+            height: 500px;
+            background: url("abt.png") no-repeat center / cover;
+
+        }
+
+        .right {
+            width: 65%;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            color: white;
+            margin-left: -110px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.80);
+            box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+
+        }
+
+        .right h1 {
+            font-size: 40px;
+            font-weight: lighter;
+        }
+
+        .right p {
+            margin: 30px 0;
+            font-weight: 600;
+            line-height: 25px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container1 {
+                flex-direction: column;
+                width: 100%;
+                margin: 0 20px;
+            }
+
+            .left {
+                width: 100%;
+                height: 400px;
+            }
+
+            .right {
+                width: 90%;
+                margin: 0;
+                margin-top: -100px;
+            }
+        }
+
+        /*right image css*/
+
+
+        .new-left-img {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .new-container1 {
+            width: 100%;
+            max-width: 1000px;
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .new-right {
+            width: 50%;
+            height: 400px;
+            background: url("abt2.png") no-repeat center / cover;
+        }
+
+        .new-left {
+            width: 55%;
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            color: white;
+            margin-right: -110px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.80);
+            box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+            z-index: 1;
+
+
+
+        }
+
+        .new-left h1 {
+            font-size: 40px;
+            font-weight: lighter;
+        }
+
+        .new-left p {
+            margin: 30px 0;
+            font-weight: 600;
+            line-height: 25px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .new-container1 {
+                flex-direction: column;
+                width: 100%;
+                margin: 10px 10px 10px 5px;
+                padding: 5px;
+
+            }
+
+            .new-right {
+                width: 100%;
+                height: 400px;
+                margin: 5px;
+                padding: 3px;
+            }
+
+            .new-left {
+                width: 80%;
+                min-height: 190px;
+                margin: 0;
+                margin-top: 20px;
+                z-index: 1;
+                margin-bottom: -100px;
+            }
+
+            .new-left h1 {
+                font-size: 30px;
+            }
+        }
+
+        .grid-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .grid-card {
+            position: relative;
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border: 4px solid #EDA501;
+            background: #EDA501;
+            border-radius: 10%;
+            overflow: hidden;
+            box-shadow: 0px 0px 24px 6px rgba(0, 0, 0, 0.30);
+            margin: 20px;
+
+        }
+
+        .grid-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: background 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+        }
+
+        .center-button {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: #333;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .grid-card:hover .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 1;
+        }
+
+        .grid-container:nth-child(2) .grid-card {
+            margin-top: -40px;
+            /* Adjust as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav class="navbar navbar-expand-lg text-bg-warning">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 px-5  mb-lg-0">
+                    <li class="nav-item px-4">
+                        <a class="nav-link" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#AboutTab" id="li_tab1">ABOUT US</a>
+                    </li>
+                    <li class="nav-item dropdown px-4">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            SERVICES
+                        </a>
+                        <ul class="dropdown-menu position-absolute bg-white">
+                            <li><a class="dropdown-item" href="cleaning.html">Cleaning</a></li>
+                            <li><a class="dropdown-item" href="technicalser.html">Technical</a></li>
+                            <li><a class="dropdown-item" href="body.html">Detailing</a></li>
+
+                            <li><a class="dropdown-item" href="cars.html">Rent a Car</a></li>
+                            <li><a class="dropdown-item" href="valetparking.html">Valet Parking </a></li>
+                            <li><a class="dropdown-item" href="honest.html">Honest Auto Care</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#contactTab" id="li_tab2">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" aria-current="true" href="#contactTab" id="li_tab2">CONTACT US</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <div class="main-content text-center" id="Content">
+
+            <div class="row">
+                <div class="col-lg-6" style="margin-top: 15% ">
+                    <p class="text-white h1 text-start p-2 ms-5">"Excellence Unveiled: Honesty and Perfection Group -
+                        Where Quality Meets Integrity!"</p>
+                    <div class="button-row">
+                        <a href="#AboutTab" id="li_tab1"> <button type="button"
+                                class="btn btn-warning m-5 fw-bolder rounded-3"> ABOUT US
+                                <svg width="20" height="15" viewBox="0 0 43 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path id="Vector" style="width: 30.947px;"
+                                        d="M34.8387 14.5047L22.1985 3.11427L25.2712 0.611515L42.9375 16.531L41.4012 17.7824L24.499 31.5493L21.5549 28.8964L34.7477 18.1508L0.340627 17.292L0.431641 13.6458L34.8387 14.5047Z"
+                                        fill="black" />
+                                </svg>
+                            </button></a>
+
+                        <button type="button" class="btn btn-outline-warning text-white rounded-3">READ MORE</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 img" style="margin-left: 35px;">
+                    <img src="img2.png" alt="" width="74%" class="animated-image">
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="yellow-box" data-aos="flip-right" data-aos-delay="100" data-aos-duration="1000">
+            <div class="d-flex text-center ">
+                <P class="fw-bolder fs-2 text-start p-2 mt-4 para">Unmatched Service Excellence at Your Fingertips
+                </P>
+            </div>
+        </div>
+    </section>
+
+    <div style="margin-top: 13% ;" id="AboutTab">
+        <h1 class="fw-bold display-3 text-black ms-5">About Us</h1>
+        <p class="text-black fs-5 ms-5">Honesty & Perfection Cleaning Services has grown as an established leader
+            providing range of service in cleaning environmental Care and security systems having Head Office in Dubai.
+            We are in this business for about nine years. We have specialized ourselves in every aspects of cleaning
+            chemicals and the equipments involved</p>
+    </div>
+    <section class="left-img">
+        <div class="container1" data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="2000">
+            <div class="left"></div>
+            <div class="right">
+                <div class="content" data-aos="zoom-in-down" data-aos-delay="200" data-aos-duration="1000">
+                    <h1 class="text-warning text-center">Vision</h1>
+                    <p class="text-center">At Honesty and Perfection customer satisfaction is our prime objective. We
+                        seek to distinguish ourselves by providing the most possible flexibility and reliability in
+                        Customer service. All our staff are well trained and continuous training is imparted to them in
+                        their respective fields of exposure to meet growing needs of customers and international
+                        standards.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="new-right-img">
+        <div class="container">
+            <div class="new-container1" data-aos="fade-down-left" data-aos-delay="200" data-aos-duration="2000">
+                <div class="new-left">
+                    <div class="new-content" data-aos="zoom-in-down" data-aos-delay="200" data-aos-duration="1000">
+                        <h1 class="text-warning text-center">Mission</h1>
+                        <p class="text-center">Honesty and perfection group came to into existence in the year 2002 as a
+                            result of the demand that existed locally in automotive industry for outsourcing their
+                            non-core
+                            business activities like, vehicle washing, cleaning, rust proofing, Body polish, interior
+                            cleaning, need of outsourced labor staff like drivers, cleaners etc.</p>
+                    </div>
+                </div>
+                <div class="new-right"></div>
+            </div>
+        </div>
+
+    </section>
+    <div class="container-fluid text-center" style="margin-top: 5%;">
+        <div class="row mt-5">
+            <div class="col">
+                <h1 class="fw-bold display-4 text-black">Our Services</h1>
+            </div>
+            <div class="col mt-3">
+                <a href="/serv.html" class="text-secondary fs-4">View all services</a>
+            </div>
+        </div>
+
+        <div class="grid-container mt-5">
+            <div class="grid-card mt-3" data-aos="zoom-out-right" data-aos-delay="200" data-aos-duration="2000">
+                <p></p>
+                <img src="assets/ser1.png" alt="Image 1">
+                <h5 class="text-center">Rent a Car service</h5>
+                <div class="overlay">
+                    <a href="cars.html"><button type="button" class="btn btn-warning m-5 fw-bolder rounded-0"> READ
+                            MORE
+                            <svg width="20" height="15" viewBox="0 0 43 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path id="Vector" style="width: 30.947px;"
+                                    d="M34.8387 14.5047L22.1985 3.11427L25.2712 0.611515L42.9375 16.531L41.4012 17.7824L24.499 31.5493L21.5549 28.8964L34.7477 18.1508L0.340627 17.292L0.431641 13.6458L34.8387 14.5047Z"
+                                    fill="black" />
+                            </svg>
+                        </button></a>
+                </div>
+            </div>
+            <div class="grid-card mt-3" data-aos="zoom-out-down" data-aos-delay="200" data-aos-duration="2000">
+                <p></p>
+                <img src="assets/ser2.png" alt="Image 2">
+                <h5 class="text-center">Valet Parking Services</h5>
+                <div class="overlay">
+                    <a href="valetparking.html"><button type="button" class="btn btn-warning m-5 fw-bolder rounded-0">
+                            READ MORE
+                            <svg width="20" height="15" viewBox="0 0 43 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path id="Vector" style="width: 30.947px;"
+                                    d="M34.8387 14.5047L22.1985 3.11427L25.2712 0.611515L42.9375 16.531L41.4012 17.7824L24.499 31.5493L21.5549 28.8964L34.7477 18.1508L0.340627 17.292L0.431641 13.6458L34.8387 14.5047Z"
+                                    fill="black" />
+                            </svg>
+                        </button></a>
+                </div>
+            </div>
+            <div class="grid-card mt-3" data-aos="zoom-out-left" data-aos-delay="200" data-aos-duration="2000">
+                <p></p>
+                <img src="assets/ser3.png" alt="Image 3">
+                <h5 class="text-center">Honest Auto Care</h5>
+                <div class="overlay">
+                    <a href="honest.html"><button type="button" class="btn btn-warning m-5 fw-bolder rounded-0">READ
+                            MORE
+                            <svg width="20" height="15" viewBox="0 0 43 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path id="Vector" style="width: 30.947px;"
+                                    d="M34.8387 14.5047L22.1985 3.11427L25.2712 0.611515L42.9375 16.531L41.4012 17.7824L24.499 31.5493L21.5549 28.8964L34.7477 18.1508L0.340627 17.292L0.431641 13.6458L34.8387 14.5047Z"
+                                    fill="black" />
+                            </svg>
+                        </button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white mb-4" id="contactTab">
+
+        <div class="container p-5">
+            <div class="row text-white">
+                <div class="col-md-4">
+                    <h1 class="ms-5">Honesty & Perfection</h1>
+
+                </div>
+                <div class="col-md-4">
+                    <p><a href="#AboutTab" id="li_tab1" class="text-white text-decoration-none">ABOUT</a></p>
+                    <p><a href="#" class="text-white text-decoration-none">SHOP</a></p>
+                    <p><a href="#" class="text-white text-decoration-none">SERVICE</a></p>
+                    <p><a href="#contactTab" id="li_tab2" class="text-white text-decoration-none">CONTACT</a></p>
+                </div>
+                <div class="col-md-4">
+                    <p class="fs-5"><a href="#" class="text-white text-decoration-underline">CONTACT US
+                        </a>
+                    </p>
+                    <p><a href="tel:+916316532314" class="text-white text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 30 30"
+                                fill="none">
+                                <path
+                                    d="M25.884 18.3795C25.74 17.379 24.9675 16.599 23.973 16.3665C20.1075 15.4605 19.1385 13.2345 18.975 10.7655C18.2895 10.638 17.07 10.5 15 10.5C12.93 10.5 11.7105 10.638 11.025 10.7655C10.8615 13.2345 9.8925 15.4605 6.027 16.3665C5.0325 16.6005 4.26 17.379 4.116 18.3795L3.3705 23.5425C3.108 25.3605 4.443 27 6.3 27H23.7C25.5555 27 26.892 25.3605 26.6295 23.5425L25.884 18.3795ZM15 23.238C12.9075 23.238 11.211 21.558 11.211 19.488C11.211 17.418 12.9075 15.738 15 15.738C17.0925 15.738 18.789 17.418 18.789 19.488C18.789 21.558 17.091 23.238 15 23.238ZM29.925 9C29.889 6.75 24.162 3.0015 15 3C5.8365 3.0015 0.109497 6.75 0.0749972 9C0.0404972 11.25 0.106497 14.178 3.8775 13.6905C8.289 13.119 8.0175 11.5785 8.0175 9.3765C8.0175 7.8405 11.6055 7.47 15 7.47C18.3945 7.47 21.981 7.8405 21.9825 9.3765C21.9825 11.5785 21.711 13.119 26.1225 13.6905C29.892 14.178 29.9595 11.25 29.925 9Z"
+                                    fill="white" />
+                            </svg> +97142630077</a></p>
+                    <p><a href="tel:+916316532314" class="text-white text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 30 30"
+                                fill="none">
+                                <path
+                                    d="M25.884 18.3795C25.74 17.379 24.9675 16.599 23.973 16.3665C20.1075 15.4605 19.1385 13.2345 18.975 10.7655C18.2895 10.638 17.07 10.5 15 10.5C12.93 10.5 11.7105 10.638 11.025 10.7655C10.8615 13.2345 9.8925 15.4605 6.027 16.3665C5.0325 16.6005 4.26 17.379 4.116 18.3795L3.3705 23.5425C3.108 25.3605 4.443 27 6.3 27H23.7C25.5555 27 26.892 25.3605 26.6295 23.5425L25.884 18.3795ZM15 23.238C12.9075 23.238 11.211 21.558 11.211 19.488C11.211 17.418 12.9075 15.738 15 15.738C17.0925 15.738 18.789 17.418 18.789 19.488C18.789 21.558 17.091 23.238 15 23.238ZM29.925 9C29.889 6.75 24.162 3.0015 15 3C5.8365 3.0015 0.109497 6.75 0.0749972 9C0.0404972 11.25 0.106497 14.178 3.8775 13.6905C8.289 13.119 8.0175 11.5785 8.0175 9.3765C8.0175 7.8405 11.6055 7.47 15 7.47C18.3945 7.47 21.981 7.8405 21.9825 9.3765C21.9825 11.5785 21.711 13.119 26.1225 13.6905C29.892 14.178 29.9595 11.25 29.925 9Z"
+                                    fill="white" />
+                            </svg> +97142636786</a></p>
+                    <p class="text-white"><a href="mailto:info@mahas.com" class=" text-white text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 30 30"
+                                fill="none">
+                                <path
+                                    d="M28.5 21.75V8.25C28.5 7.005 27.495 6 26.25 6H5.235C3.99 6 2.985 7.005 2.985 8.25V21.75C2.985 22.995 3.99 24 5.235 24H26.25C27.495 24 28.5 22.995 28.5 21.75ZM26.535 8.085C27.03 8.58 26.76 9.09 26.49 9.345L20.4 14.925L26.25 21.015C26.43 21.225 26.55 21.555 26.34 21.78C26.145 22.02 25.695 22.005 25.5 21.855L18.945 16.26L15.735 19.185L12.54 16.26L5.985 21.855C5.79 22.005 5.34 22.02 5.145 21.78C4.935 21.555 5.055 21.225 5.235 21.015L11.085 14.925L4.995 9.345C4.725 9.09 4.455 8.58 4.95 8.085C5.445 7.59 5.955 7.83 6.375 8.19L15.735 15.75L25.11 8.19C25.53 7.83 26.04 7.59 26.535 8.085Z"
+                                    fill="white" />
+                            </svg> abrar.sayed@honestynperfection.com</a>
+                    </p>
+                    <p class="text-white"><a href="mailto:info@mahas.com" class=" text-white text-decoration-none">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 30 30"
+                                fill="none">
+                                <path
+                                    d="M28.5 21.75V8.25C28.5 7.005 27.495 6 26.25 6H5.235C3.99 6 2.985 7.005 2.985 8.25V21.75C2.985 22.995 3.99 24 5.235 24H26.25C27.495 24 28.5 22.995 28.5 21.75ZM26.535 8.085C27.03 8.58 26.76 9.09 26.49 9.345L20.4 14.925L26.25 21.015C26.43 21.225 26.55 21.555 26.34 21.78C26.145 22.02 25.695 22.005 25.5 21.855L18.945 16.26L15.735 19.185L12.54 16.26L5.985 21.855C5.79 22.005 5.34 22.02 5.145 21.78C4.935 21.555 5.055 21.225 5.235 21.015L11.085 14.925L4.995 9.345C4.725 9.09 4.455 8.58 4.95 8.085C5.445 7.59 5.955 7.83 6.375 8.19L15.735 15.75L25.11 8.19C25.53 7.83 26.04 7.59 26.535 8.085Z"
+                                    fill="white" />
+                            </svg>  abrar.sayed@honestynperfection.com</a> -->
+                            FOR SALES : sales@honestynperfection.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="final.js">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
